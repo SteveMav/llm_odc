@@ -25,11 +25,25 @@ async def main():
                     "fastmcp",
                     "fastmcp",
                     "run",
-                    "C:\\Users\\ODC\\Desktop\\Didier\\agent-llm\\test_mcp.py"
+                    "C:\\Users\\steve\\OneDrive\\Documents\\IA ODC\\code\\test_mcp.py"
+                ]
+            },
+             "domotique": {
+                "transport": "stdio", # fichier local
+                "command": "uv",
+                "args": [
+                    "run",
+                    "--with",
+                    "fastmcp",
+                    "fastmcp",
+                    "run",
+                    "C:\\Users\\steve\\OneDrive\\Documents\\IA ODC\\code\\serveur_mqqt_mcp.py"
                 ]
             }
         }
     )
+
+
 
     tools = await client.get_tools()
     tools_by_name = {tool.name: tool for tool in tools}
